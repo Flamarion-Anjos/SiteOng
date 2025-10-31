@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos da ONG Anjos de Combate - Esporte eletrônico, cidadania e educação.">
+  <title>Anjos de Combate - Projetos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    :root {
+      --azul: #003366;
+      --dourado: #f0b429;
+      --cinza: #f7f7f7;
+      --escuro: #222;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--cinza);
+      color: var(--escuro);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--azul);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: var(--dourado);
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/projetos-hero.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      padding: 2rem;
+      background: white;
+      margin: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section h3 {
+      color: var(--azul);
+      border-left: 4px solid var(--dourado);
+      padding-left: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      background: var(--azul);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--dourado);
+      color: var(--escuro);
+    }
+    footer {
+      background: var(--azul);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      nav ul { flex-direction: column; align-items: flex-start; }
+      .hero h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anjos de Combate</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h2>Projetos que transformam realidades</h2>
+      <p>Conheça nossas iniciativas que unem esporte, tecnologia, cidadania e educação.</p>
+    </section>
+
+    <section class="section" id="ong">
+      <h3>🌟 ONG Anjos de Combate</h3>
+      <p>
+        Nossa base institucional é o coração do movimento. A ONG desenvolve programas de impacto social voltados à inclusão digital, cidadania e educação, 
+        além de coordenar ações voluntárias e parcerias com empresas e instituições públicas.
+      </p>
+      <ul>
+        <li>Programas de inclusão digital e oficinas educativas;</li>
+        <li>Eventos de cidadania e palestras sobre desenvolvimento humano;</li>
+        <li>Gestão de voluntariado e campanhas sociais contínuas.</li>
+      </ul>
+      <a href="cadastro.html" class="btn">Quero ser voluntário</a>
+    </section>
+
+    <section class="section" id="esports">
+      <h3>🎮 Time de E-Sports</h3>
+      <p>
+        O time de e-sports “Anjos de Combate” é formado por jovens talentos das comunidades apoiadas pela ONG. 
+        Através do esporte eletrônico, promovemos trabalho em equipe, disciplina e oportunidades profissionais.
+      </p>
+      <ul>
+        <li>Treinamentos semanais e acompanhamento psicológico;</li>
+        <li>Participação em ligas amadoras e campeonatos oficiais;</li>
+        <li>Mentorias em streaming, mídia e carreira gamer.</li>
+      </ul>
+      <a href="cadastro.html" class="btn">Quero apoiar o time</a>
+    </section>
+
+    <section class="section" id="volei">
+      <h3>🏐 Time de Vôlei Amador</h3>
+      <p>
+        O projeto de vôlei visa promover a integração social e o bem-estar físico dos participantes. 
+        É um espaço de convivência e desenvolvimento pessoal, aberto a todas as idades e gêneros.
+      </p>
+      <ul>
+        <li>Treinos semanais e torneios comunitários;</li>
+        <li>Projetos de liderança e trabalho em grupo;</li>
+        <li>Parcerias com academias e instituições esportivas.</li>
+      </ul>
+      <a href="cadastro.html" class="btn">Quero participar</a>
+    </section>
+
+    <section class="section" id="torneios">
+      <h3>Nossos Torneios</h3>
+      <p>
+        Além de promover o desenvolvimento e aplicação das praticas aprendidas, 
+        apoia financeiramente e auxilia na divulgação da ONG e seus projetos
+      </p>
+      <ul>
+        <li>Torneios de Volei e E-sports;</li>
+        <li>Eventos presenciais e online;</li>
+        <li>Divulgação de marcas parceiras e apoiadores;</li>
+      </ul>
+      <a href="cadastro.html" class="btn">Quero conhecer mais</a>
+    </section>
+
+    <section class="section" id="academia">
+      <h3>💪 Academia Anjos</h3>
+      <p>
+        A Academia Anjos é o braço físico da organização. 
+        Além de promover saúde e condicionamento físico, 
+        apoia financeiramente os projetos sociais e esportivos através de um modelo sustentável de contribuição.
+      </p>
+      <ul>
+        <li>Planos acessíveis e aulas comunitárias gratuitas;</li>
+        <li>Eventos esportivos beneficentes;</li>
+        <li>Treinamentos de liderança e autocontrole.</li>
+      </ul>
+      <a href="cadastro.html" class="btn">Quero conhecer mais</a>
+    </section>
+
+    <section class="section" id="doacao">
+      <h3>💖 Apoie nossos projetos</h3>
+      <p>
+        Sua contribuição nos ajuda a continuar transformando vidas. 
+        As doações são aplicadas com total transparência, 
+        e os relatórios de impacto ficam disponíveis em nossa área de prestação de contas.
+      </p>
+      <a href="cadastro.html" class="btn">Quero doar</a>
+    </section>
+  </main>
+
+    <footer>
+    <p>&copy; <span id="year"></span> Anjos de Combate. Todos os direitos reservados.</p>
+    <p>Compilado, em outubro de 2025, por Flamarion Silva dos Anjos como parte dos estudos da Disciplina de Desenvolvimento Front-End Para Web</p>
+  </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

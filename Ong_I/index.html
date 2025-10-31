@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONG Anjos de Combate - Esporte eletrônico, desenvolvimento, cidadania e educação.">
+  <title>Anjos de Combate - Início</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    :root {
+      --azul: #003366;
+      --dourado: #f0b429;
+      --cinza: #f7f7f7;
+      --escuro: #222;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--cinza);
+      color: var(--escuro);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--azul);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: var(--dourado); }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+    .section {
+      padding: 2rem;
+      background: white;
+      margin: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section h3 {
+      color: var(--azul);
+      border-left: 4px solid var(--dourado);
+      padding-left: 0.5rem;
+    }
+
+    /* Blog */
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .blog-post {
+      background: var(--cinza);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .blog-post:hover { transform: scale(1.02); }
+    .blog-post img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-content {
+      padding: 1rem;
+    }
+    .blog-content h4 { margin-top: 0; color: var(--azul); }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--azul);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background: var(--dourado); color: var(--escuro); }
+
+    /* Galeria */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .galeria img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox[aria-hidden="false"] { display:flex; }
+    .lb-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
+      color: white;
+    }
+    #lb-img { max-width: 100%; max-height: 80vh; border-radius: 8px; }
+    #lb-caption { margin-top: 0.5rem; }
+    .lb-close, .lb-prev, .lb-next {
+      position: absolute;
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .lb-close { top: 0; right: 0; }
+    .lb-prev { top: 50%; left: 0; transform: translateY(-50%); }
+    .lb-next { top: 50%; right: 0; transform: translateY(-50%); }
+
+    footer {
+      background: var(--azul);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul { flex-direction: column; align-items: flex-start; }
+      .hero h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anjos de Combate</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+        <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h2>Dando asas a anjos, formando líderes e guardiões.</h2>
+      <p>Transformando vidas através do esporte eletrônico, desenvolvimento, cidadania e educação.</p>
+    </section>
+
+    <section class="section" id="sobre">
+      <h3>Sobre a Organização</h3>
+      <p>A <strong>Anjos de Combate</strong> é uma ONG dedicada a despertar talentos e formar cidadãos conscientes por meio de iniciativas ligadas ao esporte eletrônico, à tecnologia e à educação.</p>
+      <p><strong>Missão:</strong> Transformar vidas através da união entre esporte, tecnologia e cidadania.</p>
+      <p><strong>Visão:</strong> Ser referência na formação de jovens líderes e agentes de mudança social.</p>
+      <p><strong>Valores:</strong> Ética, solidariedade, respeito, inclusão e inovação.</p>
+    </section>
+
+    <!-- 📰 BLOG -->
+    <section class="section" id="blog">
+      <h3>📰 Blog e Atualizações</h3>
+      <div class="blog-container">
+        <article class="blog-post">
+          <img src="assets/images/cida_dig.png" alt="Oficina de Cidadania Digital">
+          <div class="blog-content">
+            <h4>Oficina de Cidadania Digital</h4>
+            <p>Jovens aprenderam sobre ética online e segurança digital em um encontro inspirador.</p>
+            <a href="#" class="btn">Ler mais</a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <img src="assets/images/TornAmad.png" alt="Torneio de e-sports solidário">
+          <div class="blog-content">
+            <h4>Torneio Solidário de E-Sports</h4>
+            <p>Evento reuniu mais de 200 jogadores e arrecadou fundos para projetos sociais.</p>
+            <a href="#" class="btn">Ler mais</a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <img src="assets/images/voluntaario.png" alt="Mutirão de voluntariado">
+          <div class="blog-content">
+            <h4>Mutirão de Voluntariado</h4>
+            <p>Voluntários se uniram em ação de limpeza e revitalização de espaços públicos.</p>
+            <a href="#" class="btn">Ler mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 🖼️ GALERIA -->
+    <section class="section" id="galeria">
+      <h3>📸 Galeria de Fotos</h3>
+      <div class="galeria">
+        <img src="assets/images/manto1.png" alt="Uniforme Masculino" data-index="0">
+        <img src="assets/images/manto2.png" alt="Uniforme Feminino" data-index="1">
+        <img src="assets/images/espeletro.png" alt="Nossa equipe de E-sports" data-index="2">
+        <img src="assets/images/volei_fem.png" alt="Equipe de Volei Feminino" data-index="3">
+        <img src="assets/images/oficina_edu.png" alt="Oficina educacional" data-index="4">
+        <img src="assets/images/desenvolvP.png" alt="Palestra de desenvolvimento pessoal" data-index="5">
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <h3>Entre em Contato</h3>
+      <p><strong>E-mail:</strong> contato@anjosdecombate.org.br</p>
+      <p><strong>Telefone:</strong> (55) 4002-8922</p>
+      <p><strong>Endereço:</strong> Rua Esperança, 42 - São Pedro do Sul, RS</p>
+      <p><strong>Redes sociais:</strong> 
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">YouTube</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <div class="lb-content">
+      <button class="lb-close" aria-label="Fechar">&times;</button>
+      <img src="assets/images/" alt="" id="lb-img">
+      <p id="lb-caption"></p>
+      <button class="lb-prev" aria-label="Anterior">&#10094;</button>
+      <button class="lb-next" aria-label="Próximo">&#10095;</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Anjos de Combate. Todos os direitos reservados.</p>
+    <p>Compilado, em outubro de 2025, por Flamarion Silva dos Anjos como parte dos estudos da Disciplina de Desenvolvimento Front-End Para Web</p>
+  </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
